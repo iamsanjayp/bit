@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Types of forms</title>
+        <meta charset="UTF-8">
+        <meta name="Description" content="this webpage is a sample of types of forms in html">
+        <meta name="keywords" content="webpage, sample, forms, html">
+        <meta name="author" content="sanjay">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Types of forms in HTML</h1>
+        <br>
+        <form action="formsinput.txt">
+            <div>
+            <label for="fname">First name</label>
+            <input type="text" id="fname" name="fname" required>
+            </div>
+            <br>
+            <div>
+            <label for="lname">Last name</label>
+            <input type="text" id="lname" name="lname" required>
+            </div>
+            <br>
+            <div>
+                <label for="email">email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <br>
+            <dev>
+                <label for="password">password</label>
+                <input type="password" id="password" name="password" required>
+            </dev>
+            <br>
+            <br>
+            <div>
+                <label for="phone">phone #</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <br>
+            <div>
+                <label for="bday">Birthday</label>
+                <input type="date" id="bday" name="bday" required>
+            </div>
+            <br>
+            <div>
+                <label for="age">age</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <br>
+            <div>
+                <label for="title">title</label>
+                <label for="Mr.">Mr.</label>
+                <input type="radio" id="Mr." name="title" value="Mr.">
+                <label for="Msr.">Msr.</label>
+                <input type="radio" id="Msr." name="title" value="Msr.">
+                <label for="Phd.">Phd.</label>
+                <input type="radio" id="Phd." name="title" value="Phd.">
+            </div>
+            <br>
+            <div>
+                <label for="payment">Payment:</label>
+                <select id="payment" name="payment">
+                    <option value="visa">visa</option>
+                    <option value="mastercard">mastercard</option>
+                    <option value="paypal">paypal</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="subscribe">subscribe</label>
+                <input type="checkbox" id="subscribe" name="subs">
+            </div>
+            <input type="reset">
+            <input type="submit">
+        </form>
+    </body>
+</html>

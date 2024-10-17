@@ -1,0 +1,23 @@
+body{
+    background-color: white;
+}
+h1{
+    background-color: cyan;
+    color: black;
+}
+h1 span{
+    text-decoration: dotted;
+    text-decoration-color: green;
+}
+p{
+    color: black;
+    font-family: consolas, sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 18px;
+    background-color: white;
+}
+p span{
+    text-decoration: dotted;
+    text-decoration-color: green;
+}

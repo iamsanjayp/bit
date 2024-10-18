@@ -12,6 +12,21 @@ commands = {"Persona":"You are lina, You are a chat bot designed to answer quest
             "remember":"Only answer questions about pc trouble shooting, all other questions must be politly shot down and you should clearly say that you can only answer pc trouble shooting questions. make sure to remeber the above commands before answering your prompts, and maintain a polite and apologetic tone. Don't suggest actions that would void the customers warranty. If you can't solve the issue instruct the customer to go to a physical service center."}
 commands=str(commands)
 model = genai.GenerativeModel("gemini-1.5-flash", system_instruction=commands)
-question = input("Enter your prompt: ")
-response = model.generate_content(question)
-print(response.text)
+chat = model.start_chat(
+    history=[
+        {"role": "user", "parts": "Hello"},
+        {"role": "model", "parts": "Great to meet you. What would you like to know?"},
+    ]
+)
+while True:
+    question = input("Enter your question(or type stop to end the convo): ")
+
+    if question.lower() == "stop":
+        print("Thank you for chatting with me! have a great time.")
+        break
+    try:
+        response = chat.send_message(question, stream=True)
+        for chunk in response:
+            print(chunk.text)
+    except Exception as e:
+        print(f"An exception occured: {e}. Please try again.")

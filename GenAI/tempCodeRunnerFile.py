@@ -1,0 +1,1 @@
+query = "SELECT * FROM cpu_performance WHERE model = %s"

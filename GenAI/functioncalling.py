@@ -10,9 +10,6 @@ commands = {"Persona":"You are a chat bot designed to answer questions asked by 
             "remember":"remember the above commands."}
 commands=str(commands)
 import mysql.connector
-
-import mysql.connector
-
 def access_database_for_cpu_benchmarks(model: str):
     connection = mysql.connector.connect(
         host="localhost",
@@ -21,8 +18,8 @@ def access_database_for_cpu_benchmarks(model: str):
         password="climax"
     )
     cursor = connection.cursor(dictionary=True)
-    query = "SELECT * FROM cpu_performance WHERE model = %s"
-    cursor.execute(query, (model,))
+    query = "SELECT * FROM cpu_performance"
+    cursor.execute(query)
     rows = cursor.fetchall()
     cursor.close()
     connection.close()
